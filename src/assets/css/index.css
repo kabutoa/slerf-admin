@@ -1,0 +1,26 @@
+@import './transition.css';
+@import './naive.css';
+
+:root {
+  --menu-width: 240px;
+  --menu-collapsed-width: 64px;
+  --menu-collapsed-icon-size: 22px;
+} 
+
+html,
+body,
+#app {
+  width: 100%;
+  height: 100%;
+}
+.color-weak {
+  filter: invert(80%);
+}
+
+.gray-mode {
+  filter: grayscale(100%);
+}
+
+.drag-handle {
+  cursor: move;
+}
