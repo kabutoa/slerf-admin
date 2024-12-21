@@ -1,20 +1,18 @@
 <script setup lang="ts">
+import IconWrapper from './IconWrapper.vue'
 import { useLayoutStore } from '@/store'
 
 const layoutStore = useLayoutStore()
-
-const loading = ref(false)
 </script>
 
 <template>
   <n-tooltip trigger="hover">
     <template #trigger>
       <IconWrapper @click="layoutStore.toggleFullScreen">
-        <n-icon size="1.2em">
-          <icon-park-outline-refresh :class="{ 'animate-spin': loading }" />
-        </n-icon>
+        <icon-park-outline-off-screen-one v-if="layoutStore.contentFullScreen" />
+        <icon-park-outline-full-screen-one v-else />
       </IconWrapper>
     </template>
-    <span>刷新</span>
+    <span>{{ layoutStore.isFullScreen ? '退出内容全屏' : '内容全屏' }}</span>
   </n-tooltip>
 </template>

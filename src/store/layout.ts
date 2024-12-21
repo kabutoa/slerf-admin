@@ -1,5 +1,6 @@
 import { createStoreKey } from '@/utils'
-import type { RouteRecordRaw } from 'vue-router'
+import type { StoreDefinition } from 'pinia'
+// import type { RouteRecordRaw } from 'vue-router'
 
 export const useLayoutStore = defineStore(createStoreKey('layout'), () => {
   // 是否折叠
@@ -51,8 +52,8 @@ export const useLayoutStore = defineStore(createStoreKey('layout'), () => {
 
   // 是否显示tabs
   const showTabs = ref(true)
-  const pinTabs = ref<RouteRecordRaw[]>([])
-  const unPinTabs = ref<RouteRecordRaw[]>([])
+  const pinTabs = ref<number[]>([])
+  const unPinTabs = ref<number[]>([2, 3])
   const tabs = computed(() => [...pinTabs.value, ...unPinTabs.value])
 
   // 切换tabs
@@ -78,4 +79,4 @@ export const useLayoutStore = defineStore(createStoreKey('layout'), () => {
     unPinTabs,
     tabs,
   }
-})
+}) as StoreDefinition

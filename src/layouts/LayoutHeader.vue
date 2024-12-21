@@ -1,12 +1,4 @@
 <script setup lang="ts">
-import Breadcrumb from '@/components/common/Breadcrumb.vue'
-import Search from '@/components/common/Search.vue'
-import Theme from '@/components/common/Theme.vue'
-import AppLang from '@/components/common/AppLang.vue'
-import Settings from '@/components/common/Settings.vue'
-import Notice from '@/components/common/Notice.vue'
-import User from '@/components/common/User.vue'
-import Tabs from '@/components/common/Tabs.vue'
 import { useLayoutStore } from '@/store/layout'
 
 const layoutStore = useLayoutStore()
@@ -28,7 +20,7 @@ const layoutStore = useLayoutStore()
         <User />
       </div>
     </div>
-    <div class="h-45px w-full flex items-end">
+    <div class="h-45px flex items-end">
       <Tabs />
     </div>
   </n-layout-header>

@@ -10,10 +10,7 @@ const VITE_APP_TITLE = import.meta.env.VITE_APP_TITLE
 </script>
 
 <template>
-  <div
-    class="h-60px flex-center cursor-pointer gap-2"
-    @click="router.push('/')"
-  >
+  <div class="h-60px flex-center cursor-pointer gap-2 w-full" @click="router.push('/')">
     <n-image :src="logoImage" width="40" />
     <h1
       v-if="!layoutStore.collapsed"

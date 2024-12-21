@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import { useLayoutStore } from '@/store'
-import Logo from '@/components/common/Logo.vue'
-import Menu from '@/components/common/Menu.vue';
 
 const layoutStore = useLayoutStore()
 </script>
@@ -9,6 +7,7 @@ const layoutStore = useLayoutStore()
 <template>
   <n-layout-sider
     class="pb-60px"
+    content-style="display: flex; flex-direction: column;"
     bordered
     :collapsed="layoutStore.collapsed"
     collapse-mode="width"
@@ -18,7 +17,7 @@ const layoutStore = useLayoutStore()
     @update:collapsed="layoutStore.toggleCollapsed"
   >
     <Logo v-if="layoutStore.showLogo" />
-    <n-scrollbar>
+    <n-scrollbar class="flex-1 w-full">
       <Menu />
     </n-scrollbar>
   </n-layout-sider>
