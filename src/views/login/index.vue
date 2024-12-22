@@ -30,7 +30,7 @@ const formComponets = {
     >
       <div class="w-full flex flex-col items-center">
         <n-image :src="logoImage" width="100" />
-        <n-h3>{{ VITE_APP_TITLE }}</n-h3>
+        <n-h2>{{ VITE_APP_TITLE }}</n-h2>
         <transition name="fade-slide" mode="out-in">
           <component :is="formComponets[formType]" v-model="formType" class="w-85%" />
         </transition>
