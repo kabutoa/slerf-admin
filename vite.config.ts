@@ -55,9 +55,12 @@ export default defineConfig(({ mode }) => {
       }),
       // 自动引入组件
       Components({
-        resolvers: [IconsResolver({
-          prefix: false
-        }), NaiveUiResolver()],
+        resolvers: [
+          IconsResolver({
+            prefix: false,
+          }),
+          NaiveUiResolver(),
+        ],
         dts: 'src/typings/components.d.ts',
       }),
 

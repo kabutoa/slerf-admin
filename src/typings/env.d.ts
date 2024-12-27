@@ -5,7 +5,7 @@ interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string
   readonly VITE_API_URL: string
   readonly VITE_MOCK: boolean
-  readonly VITE_ROUTE_MODE: 'hash' | 'web'
+  readonly VITE_ROUTER_MODE: 'hash' | 'web'
 }
 
 interface ImportMeta {

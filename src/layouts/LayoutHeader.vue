@@ -1,16 +1,13 @@
-<script setup lang="ts">
-import { useLayoutStore } from '@/store/layout'
-
-const layoutStore = useLayoutStore()
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <n-layout-header :bordered="!layoutStore.showTabs">
-    <div class="h-60px flex-y-center justify-between p-x-xl">
+  <n-layout-header>
+    <div class="h-60px flex-y-center justify-between">
       <div class="flex-y-center h-full">
+        <Collapse />
         <Breadcrumb />
       </div>
-      <div class="flex-y-center gap-1 h-full">
+      <div class="flex-y-center gap-1 h-full p-r-0.75rem">
         <Search />
         <FullScreen />
         <Theme />
@@ -20,7 +17,8 @@ const layoutStore = useLayoutStore()
         <User />
       </div>
     </div>
-    <div class="h-45px flex items-end">
+    <!-- <div class="wh-full flex items-end h-45px border-t-1px" style="border-color: var(--n-border-color)"> -->
+    <div class="wh-full flex items-end h-45px">
       <Tabs />
     </div>
   </n-layout-header>

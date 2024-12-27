@@ -8,7 +8,9 @@ const name = ref()
 </script>
 
 <template>
-  <n-tabs v-model:value="name" type="card" closable>
+  <n-tabs v-model:value="name" type="card" closable
+  :tabs-padding="12"
+  >
     <n-tab v-for="panel in pinTabs" :key="panel" :name="panel">
       {{ panel }}
     </n-tab>

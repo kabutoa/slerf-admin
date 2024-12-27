@@ -8,7 +8,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll": "explicit"
   },
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "i18n-ally.localesPaths": ["src/locales"],
   "i18n-ally.sourceLanguage": "en"

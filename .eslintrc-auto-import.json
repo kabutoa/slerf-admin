@@ -312,6 +312,8 @@
     "watchTriggerable": true,
     "watchWithFilter": true,
     "whenever": true,
-    "useI18n": true
+    "useI18n": true,
+    "usePreferredReducedTransparency": true,
+    "useSSRWidth": true
   }
 }

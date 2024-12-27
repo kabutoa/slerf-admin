@@ -1,6 +1,4 @@
 import { createStoreKey } from '@/utils'
-import type { StoreDefinition } from 'pinia'
-// import type { RouteRecordRaw } from 'vue-router'
 
 export const useLayoutStore = defineStore(createStoreKey('layout'), () => {
   // 是否折叠
@@ -79,4 +77,4 @@ export const useLayoutStore = defineStore(createStoreKey('layout'), () => {
     unPinTabs,
     tabs,
   }
-}) as StoreDefinition
+})
